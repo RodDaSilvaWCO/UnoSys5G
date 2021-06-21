@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "UnoSys5G.Windows": {
+      "commandName": "Project",
+      "commandLineArgs": "1 0"
+    }
+  }
+}
