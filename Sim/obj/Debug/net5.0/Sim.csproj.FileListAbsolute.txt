@@ -1,0 +1,16 @@
+C:\UnoSys5G\Sim\bin\Debug\net5.0\Sim.exe
+C:\UnoSys5G\Sim\bin\Debug\net5.0\Sim.deps.json
+C:\UnoSys5G\Sim\bin\Debug\net5.0\Sim.runtimeconfig.json
+C:\UnoSys5G\Sim\bin\Debug\net5.0\Sim.runtimeconfig.dev.json
+C:\UnoSys5G\Sim\bin\Debug\net5.0\Sim.dll
+C:\UnoSys5G\Sim\bin\Debug\net5.0\ref\Sim.dll
+C:\UnoSys5G\Sim\bin\Debug\net5.0\Sim.pdb
+C:\UnoSys5G\Sim\obj\Debug\net5.0\Sim.GeneratedMSBuildEditorConfig.editorconfig
+C:\UnoSys5G\Sim\obj\Debug\net5.0\Sim.AssemblyInfoInputs.cache
+C:\UnoSys5G\Sim\obj\Debug\net5.0\Sim.AssemblyInfo.cs
+C:\UnoSys5G\Sim\obj\Debug\net5.0\Sim.csproj.CoreCompileInputs.cache
+C:\UnoSys5G\Sim\obj\Debug\net5.0\Sim.dll
+C:\UnoSys5G\Sim\obj\Debug\net5.0\ref\Sim.dll
+C:\UnoSys5G\Sim\obj\Debug\net5.0\Sim.pdb
+C:\UnoSys5G\Sim\obj\Debug\net5.0\Sim.genruntimeconfig.cache
+C:\UnoSys5G\Sim\obj\Debug\net5.0\Sim.csprojAssemblyReference.cache

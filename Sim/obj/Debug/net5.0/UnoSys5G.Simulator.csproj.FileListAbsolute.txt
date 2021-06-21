@@ -1,0 +1,16 @@
+C:\UnoSys5G\Sim\bin\Debug\net5.0\UnoSys5G.Simulator.exe
+C:\UnoSys5G\Sim\bin\Debug\net5.0\UnoSys5G.Simulator.deps.json
+C:\UnoSys5G\Sim\bin\Debug\net5.0\UnoSys5G.Simulator.runtimeconfig.json
+C:\UnoSys5G\Sim\bin\Debug\net5.0\UnoSys5G.Simulator.runtimeconfig.dev.json
+C:\UnoSys5G\Sim\bin\Debug\net5.0\UnoSys5G.Simulator.dll
+C:\UnoSys5G\Sim\bin\Debug\net5.0\ref\UnoSys5G.Simulator.dll
+C:\UnoSys5G\Sim\bin\Debug\net5.0\UnoSys5G.Simulator.pdb
+C:\UnoSys5G\Sim\obj\Debug\net5.0\UnoSys5G.Simulator.csprojAssemblyReference.cache
+C:\UnoSys5G\Sim\obj\Debug\net5.0\UnoSys5G.Simulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\UnoSys5G\Sim\obj\Debug\net5.0\UnoSys5G.Simulator.AssemblyInfoInputs.cache
+C:\UnoSys5G\Sim\obj\Debug\net5.0\UnoSys5G.Simulator.AssemblyInfo.cs
+C:\UnoSys5G\Sim\obj\Debug\net5.0\UnoSys5G.Simulator.csproj.CoreCompileInputs.cache
+C:\UnoSys5G\Sim\obj\Debug\net5.0\UnoSys5G.Simulator.dll
+C:\UnoSys5G\Sim\obj\Debug\net5.0\ref\UnoSys5G.Simulator.dll
+C:\UnoSys5G\Sim\obj\Debug\net5.0\UnoSys5G.Simulator.pdb
+C:\UnoSys5G\Sim\obj\Debug\net5.0\UnoSys5G.Simulator.genruntimeconfig.cache
