@@ -1,0 +1,75 @@
+﻿@using UnoSys5G.Services
+@inject INetworkOverlay networkOverlay
+@inject ITime timeManager 
+@inject IApp app 
+@using System.Diagnostics
+@using System.IO
+@using System.Timers 
+@using Microsoft.MobileBlazorBindings.SkiaSharp;
+@using SkiaSharp;
+@using SK = SkiaSharp.Views.Forms;
+<Microsoft.MobileBlazorBindings.Elements.ContentView >
+    <Microsoft.MobileBlazorBindings.Elements.StackLayout>
+
+        <Microsoft.MobileBlazorBindings.Elements.StackLayout Margin="new Thickness(20)" Orientation="StackOrientation.Horizontal">
+
+            @if (app.DemoID == 0)
+            {
+                <Microsoft.MobileBlazorBindings.Elements.Label Text="Autonomous Mode:" /> <Microsoft.MobileBlazorBindings.Elements.CheckBox IsCheckedChanged="OnCheckBoxCheckedChanged" IsChecked="@app.IsAutonomousMode" />
+                <Microsoft.MobileBlazorBindings.Elements.Label Text="    Speed:" /><Microsoft.MobileBlazorBindings.Elements.Button Text="<" OnClick="@OnSpeedDown" VerticalOptions="LayoutOptions.Center" /><Microsoft.MobileBlazorBindings.Elements.Label Text="@(app.CurrentSpeed.ToString())" /><Microsoft.MobileBlazorBindings.Elements.Button Text=">" OnClick="@OnSpeedUp" VerticalOptions="LayoutOptions.Center" />
+                <Microsoft.MobileBlazorBindings.Elements.Label Text="    Collisions:" /><Microsoft.MobileBlazorBindings.Elements.Label Text="@(app.CollisionCount.ToString())" />
+                <Microsoft.MobileBlazorBindings.Elements.Label Text="    Time:" /><Microsoft.MobileBlazorBindings.Elements.Label Text="@(app.UnoSysClockTimeUtc.ToString("HH:MM:ss:fff "))" />
+            }
+            else
+            {
+                <Microsoft.MobileBlazorBindings.Elements.Button Text="Play" IsEnabled="@(!app.Play)" OnClick="@OnPlay" VerticalOptions="LayoutOptions.Center" Padding="3" CornerRadius="3" />
+            }
+        </Microsoft.MobileBlazorBindings.Elements.StackLayout>
+
+        @*<SKCanvasView @ref="CanvasView" OnPaintSurface="PaintSurface" HeightRequest="1000"></SKCanvasView>*@
+
+        <BlazorWebView VerticalOptions="LayoutOptions.FillAndExpand">
+            <UnoSys5G.WebUI.App />
+        </BlazorWebView>
+    </Microsoft.MobileBlazorBindings.Elements.StackLayout>
+</Microsoft.MobileBlazorBindings.Elements.ContentView>
+
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        networkOverlay.TimerTick += TimerService_TimerTick;
+        base.OnInitialized();
+    }
+
+    private async void TimerService_TimerTick()
+    {
+        await InvokeAsync(StateHasChanged);
+    }
+
+
+    void OnPlay()
+    {
+        app.Play = !app.Play;
+        StateHasChanged();
+    }
+
+    void OnSpeedUp()
+    {
+        app.CurrentSpeed = (app.CurrentSpeed == 10 ? 10 : app.CurrentSpeed + 1);
+        StateHasChanged();
+    }
+
+    void OnSpeedDown()
+    {
+        app.CurrentSpeed = (app.CurrentSpeed == 0 ? 0 : app.CurrentSpeed - 1);
+        StateHasChanged();
+    }
+
+
+    void OnCheckBoxCheckedChanged()
+    {
+        app.IsAutonomousMode = !app.IsAutonomousMode;
+    }
+}
